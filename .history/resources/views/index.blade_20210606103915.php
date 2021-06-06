@@ -166,13 +166,12 @@
             </td>
             <td>
               <input type="text" name="content" value="{{$item->content}}">
-              
+
             </td>
+            <form action="/todo/update" method="POST">
           </form>
           <td>
-            <form action="/todo/update" method="POST">
               @csrf
-
               <input type="hidden" name="id" value="{{$item->id}}">
               <button class="button__update">更新</button>
             </form>

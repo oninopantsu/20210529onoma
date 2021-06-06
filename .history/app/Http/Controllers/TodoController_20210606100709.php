@@ -35,7 +35,7 @@ class TodoController extends Controller
         unset($form['_token_']);
         $content->fill($form)->save();
         $items = Todos::all();
-        return view('index', ['items' => $items]);
+        return view('/', ['items' => $items]);
     }
     public function delete(Request $request)
     {
