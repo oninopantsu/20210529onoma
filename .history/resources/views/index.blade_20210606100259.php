@@ -178,7 +178,6 @@
           </td>
           <td>
             <form action="/todo/delete" method="post">
-            @csrf
               <input type="hidden" name="id" value="{{$item->id}}">
               <button class="button__delete">削除</button>
             </form>
