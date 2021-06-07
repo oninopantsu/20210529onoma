@@ -158,6 +158,7 @@
             @csrf
             <td>
               <input type="hidden" name="id" value="{{$item->id}}">
+              <input type="hidden" name="__token">
               <p>{{$item->created_at}}</p>
             </td>
             <td>
@@ -169,7 +170,6 @@
           <td>
             <form action="/todo/update" method="POST">
               @csrf
-
               <input type="hidden" name="id" value="{{$item->id}}">
               <p>{{$item->updated_at}}</p>
 

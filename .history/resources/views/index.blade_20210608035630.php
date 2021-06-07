@@ -158,6 +158,7 @@
             @csrf
             <td>
               <input type="hidden" name="id" value="{{$item->id}}">
+              <input type="hidden" name="_token">
               <p>{{$item->created_at}}</p>
             </td>
             <td>

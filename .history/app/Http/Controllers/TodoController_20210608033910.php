@@ -34,8 +34,6 @@ class TodoController extends Controller
         $form = $request->all();
         unset($form['_token_']);
         $content->fill($form)->save();
-        return redirect('/');
-
     }
     public function delete(Request $request)
     {

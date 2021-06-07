@@ -167,15 +167,14 @@
           </form>
 
           <td>
-            <form action="/todo/update" method="POST">
-              @csrf
-
-              <input type="hidden" name="id" value="{{$item->id}}">
-              <p>{{$item->updated_at}}</p>
-
+           <form action="/todo/update" method="POST">
+          @csrf
+            <input type="hidden" name="id" value="{{$item->id}}">
+            <td>
               <input type="text" name="content" value="{{$item->content}}">
-              <button class="button__update">更新</button>
-            </form>
+            </td>
+          <button class="button__update">更新</button>
+          </form>
           </td>
 
           <td>

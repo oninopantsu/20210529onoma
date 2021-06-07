@@ -158,7 +158,7 @@
             @csrf
             <td>
               <input type="hidden" name="id" value="{{$item->id}}">
-              <p>{{$item->created_at}}</p>
+              <p>{{$item->time}}</p>
             </td>
             <td>
               <input type="text" name="content" value="{{$item->content}}">
@@ -169,9 +169,8 @@
           <td>
             <form action="/todo/update" method="POST">
               @csrf
-
               <input type="hidden" name="id" value="{{$item->id}}">
-              <p>{{$item->updated_at}}</p>
+              <p>{{$item->timestamp}}</p>
 
               <input type="text" name="content" value="{{$item->content}}">
               <button class="button__update">更新</button>
