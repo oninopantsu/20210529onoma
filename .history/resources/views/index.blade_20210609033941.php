@@ -85,7 +85,7 @@
       border: 1px solid #ccc;
       font-size: 14px;
     }
-
+    .
     .button__update {
       border: 2px solid #fa9770;
       color: #fa9770;
@@ -154,24 +154,22 @@
         </tr>
         <tr>
           @foreach($items as $item)
-          
+          <div class="update">
+          <td>
             <form action="/todo/update" method="POST">
               @csrf
-              <td>
-                <input type="hidden" name="id" value="{{$item->id}}">
-                <p>{{$item->updated_at}}</p>
-              <td>
-                <input type="text" name="content" value="{{$item->content}}">
-              </td>
-              <td>
-                <button class="button__update">更新</button>
-              </td>
-              </td>
-            </form>
-          
 
+              <input type="hidden" name="id" value="{{$item->id}}">
+              <p>{{$item->updated_at}}</p>
+
+              <input type="text" name="content" value="{{$item->content}}">
+              <button class="button__update">更新</button>
+            </form>
+          </td>
+
+          <td>
+            </div>
             <form action="/todo/delete" method="post">
-            <td>
               @csrf
               <input type="hidden" name="id" value="{{$item->id}}">
               <button class="button__delete">削除</button>

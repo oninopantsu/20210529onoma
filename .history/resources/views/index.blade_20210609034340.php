@@ -160,12 +160,9 @@
               <td>
                 <input type="hidden" name="id" value="{{$item->id}}">
                 <p>{{$item->updated_at}}</p>
-              <td>
+  
                 <input type="text" name="content" value="{{$item->content}}">
-              </td>
-              <td>
                 <button class="button__update">更新</button>
-              </td>
               </td>
             </form>
           
